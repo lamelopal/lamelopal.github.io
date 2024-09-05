@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-zinc-900">
+    <nav class="bg-slate-950 fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-gray-600 bg-">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="https://pbs.twimg.com/profile_images/1686594706665508864/ADCjcudE_400x400.jpg"
+                    class="h-9 rounded-xl" alt="Flowbite Logo">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portfolio</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="#"
+                    class="relative inline-flex items-center justify-center px-3 py-2 overflow-hidden font-semibold text-white rounded-md shadow-2xl group">
+                    <span
+                        class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-green-700 via-green-600 to-green-800 group-hover:opacity-100"></span>
+                    <span
+                        class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                    <span
+                        class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                    <span
+                        class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                    <span class="absolute inset-0 w-full h-full border border-white rounded-md opacity-10"></span>
+                    <span
+                        class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                    <span class="relative">Let's Talk 🤝</span>
+                </a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-black rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-black md:dark:bg-black dark:border-black">
+                    <li>
+                        <a href="#"
+                            class="duration-150 block py-2 px-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 md:dark:text-green-500"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="duration-150 block py-2 px-3 text-gray-900 rounded hover:bg-green-50 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-green-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="duration-150 block py-2 px-3 text-gray-900 rounded hover:bg-green-50 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-green-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="duration-150 block py-2 px-3 text-gray-900 rounded hover:bg-green-50 md:hover:bg-transparent md:hover:text-green-700 md:p-0 md:dark:hover:text-green-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col md:flex-row sm:flex-row">
+        <div class="w-96 mt-10 md:mt-20 xl:mt-44 xl:w-1/2 md:w-1/2">
+            <p class="text-6xl xl:ml-32 xl:mt-32 md:ml-20 md:mt-20 ml-14 mt-32 font-semibold text-white">Hi! 👋</p>
+            <p class="text-6xl font-bold xl:ml-32 xl:mt-3 md:ml-20 md:mt-3 ml-14 mt-2 text-white">I'm <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-green-700 to-green-800">Naufal
+                    Azriel</span></p>
+            <p class="xl:ml-32 xl:mt-3 md:ml-20 md:mt-3 ml-14 mt-5 text-2xl font-medium text-white">Junior Web Developer
+                🧑‍💻</p>
+            <p class="xl:ml-32 xl:mt-3 md:ml-20 md:mt-3 ml-14 mt-5 text-base font-normal text-white">Hi friends, my name
+                is Naufal Azriel Al Azizy, usually called Naufal or Azriel, and this is my portfolio website that I
+                created using Tailwind.</p>
+            <a href="#"
+                class="xl:ml-32 xl:mt-10 md:ml-20 md:mt-10 ml-14 mt-10 relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-mono font-medium tracking-tighter text-white bg-gray-800 rounded-lg group">
+                <span
+                    class="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-500 rounded-full group-hover:w-56 group-hover:h-56"></span>
+                <span
+                    class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+                <span class="relative">Hire Me 🔫</span>
+            </a>
+        </div>
+        <div class="xl:w-1/2 md:w-1/2 sm:w-1/2 xl:mt-44 md:mt-44  mt-20 flex justify-center">
+            <img class="xl:w-80 md:w-64 w-80 rounded-xl ring-8 ring-white duration-150 transition-transform transform hover:-rotate-2 hover:translate-x-2"
+                src="https://i.pinimg.com/originals/02/7d/3f/027d3f5cf10f53952f080d5b343e4e41.jpg">
+        </div>
+    </div>
+    <div class="h-screen xl:mt-40 md:mt-32 mt-80">
+        <div class="flex xl:h-2/3 h-1/2 items-center justify-center">
+            <img src="project1.png" class="xl:w-1/2 md:w-[70%] w-96 absolute z-30">
+            <div class="flex justify-center items-center text-center">
+                <p
+                    class="text-white text-7xl font-bold ml-0 xl:mb-0 xl:ml-0 md:mb-0 md:text-[15rem] md:font-extrabold md:ml-5 md:tracking-[20px] mb-[200%] xl:text-[20rem] xl:font-extrabold xl:tracking-[30px]">
+                    WORK</p>
+            </div>
+        </div>
+        <div class="h-1/3 flex flex-col justify-center items-start">
+            <div
+                class="order-2 mt-5 items-center text-white w-72 ml-[16.5%] xl:mb-[25%] xl:order-none text-center mb-72 xl:absolute xl:mt-96 xl:text-left xl:ml-52 xl:text-2xl">
+                A Product Designer and Visual Developer. I specialize in UI/UX Design, Responsive Web Design, and Visual
+                Development.</div>
+            <div
+                class="order-1 xl:w-auto mt-5 font-medium ml-[11%] text-3xl w-full xl:mb-5 xl:order-none xl:font-semibold xl:absolute xl:ml-[45%] xl:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-green-700 to-green-800">
+                Milwaukee Bucks Website</div>
+        </div>
+    </div>
+
+    <section id="about" class=" pt-0 md:pt-24 pb-24">
+        <div class="container-fluid flex flex-col md:flex-row justify-center items-center">
+            <div class="img w-[100%] md:w-[43%]">
+                <img class="w-full" src="prof.png" alt="">
+            </div>
+            <div class="text w-[80%] md:w-[40%] grid justify-start items-center  md:ml-24">
+                <p class="text-white font-semibold text-[30px] md:mt-0 mt-5 md:text-[40px]">About Me</p>
+                <p class="text-white font-light md:mt-28 mt-10 text-[15px] md:text-[20px]">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing
+                    elit. Ut orci libero, porttitor eu odio eu, accumsan varius velit. Curabitur eros quam, tempus nec
+                    interdum eu, feugiat vel dui. Nullam suscipit viverra pharetra.
+                </p>
+                <p class="text-white font-light md:mt-28 mt-10 text-[15px] md:text-[20px]">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing
+                    elit. Ut orci libero, porttitor eu odio eu, accumsan varius velit. Curabitur eros quam, tempus nec
+                    interdum eu, feugiat vel dui. Nullam suscipit viverra pharetra.
+                </p>
+                <p class="text-white font-light md:mt-28 mt-10 text-[15px] md:text-[20px]">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing
+                    elit. Ut orci libero, porttitor eu odio eu, accumsan varius velit. Curabitur eros quam, tempus nec
+                    interdum eu, feugiat vel dui. Nullam suscipit viverra pharetra.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="pt-24 pb-24 flex flex-col md:flex-row justify-center items-center gap-36">
+        <div
+            class=" w-[80%] md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg" src="huhuhehe.png" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology acquisitions 2021</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Read more
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div
+            class="w-[80%] md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg" src="huhuhehe.png" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology acquisitions 2021</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Read more
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div
+            class="w-[80%] md:max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-t-lg" src="huhuhehe.png" alt="" />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                        technology acquisitions 2021</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Read more
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="timeline" class="pt-24 md:pb-0 ">
+
+        <div class="container-fluid flex flex-col md:flex-row justify-center items-center">
+
+            <ol class="relative border-s border-gray-200 dark:border-gray-700 w-1/2 mr-28 ml-36 mb-14 md:mb-0">
+                <li class="mb-10 ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3
+                        class="flex items-center mb-1 text-[25px] md:text-[50px] font-semibold text-gray-900 dark:text-white">
+                        Flowbite
+                        Application UI v2.0.0
+                    </h3>
+                    <time class="block mb-4 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        on
+                        January 13th, 2022 <span
+                            class="bg-blue-100 text-blue-800 text-[10px] font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></time>
+                    <a href="#"
+                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
+                            class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                            <path
+                                d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+                        </svg> Download ZIP</a>
+                </li>
+                <li class="mb-10 ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-[25px] md:text-[50px] font-semibold text-gray-900 dark:text-white">Flowbite
+                        Figma v1.3.0</h3>
+                    <time class="block mb-4 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        on
+                        December 7th, 2021</time>
+                    <a href="#"
+                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
+                            class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                            <path
+                                d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+                        </svg> Download ZIP</a>
+                </li>
+                <li class="ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-[25px] md:text-[50px] font-semibold text-gray-900 dark:text-white">Flowbite
+                        Library v1.2.2</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        on
+                        December 2nd, 2021</time>
+                </li>
+            </ol>
+            <div class="img w-full md:w-1/2">
+                <img src="unpla.png" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="bg-slate-950 rounded-lg shadow">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="https://pbs.twimg.com/profile_images/1686594706665508864/ADCjcudE_400x400.jpg"
+                        class="h-9 rounded-lg" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portfolio</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="https://www.instagram.com/naufalazrieel/"
+                            class="hover:underline me-4 md:me-6">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://www.threads.net/@naufalazrieel"
+                            class="hover:underline me-4 md:me-6">Threads</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCzWpO3vwmw1XLru_soYz5bg"
+                            class="hover:underline me-4 md:me-6">Youtube</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/naufal-azriel-a-77b5a3247/"
+                            class="hover:underline">Linkedin</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400 bg-">© 2023 <a href=""
+                    class="hover:underline">Portfolio</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+
+</html>

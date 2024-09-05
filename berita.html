@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ba2edaa873.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        .hover-smooth{
+            transition: 0.2s ease;
+        }
+        .hover-no-mover{
+            transform: translateZ(0);
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar" class="w-full py-3 bg-green-900 shadow-2xl shadow-green-900">
+        <div class="flex flex-row">
+            <div class="logo basis-1/4 flex justify-center items-center">
+                <img class="" src="https://logos-world.net/wp-content/uploads/2020/05/Milwaukee-Bucks-logo.png" alt="logo" style="width: 120px;">
+            </div>
+            <div class="basis-1/2 flex justify-center items-center">
+                <div class="nav-items duration-300 md:static absolute md:min-h-fit bg-green-900 top-24 py-4 rounded-md right-[-100%] w-full xl:ml-20 md:flex justify-center">
+                    <div class="flex md:flex-row flex-col gap-10 md:w-full">
+                      <a href="#" class="text-white hover:bg-white hover:text-green-900 hover-smooth rounded-md px-4 py-2 text-md font-medium">HOME</a>
+                      <a href="#" class="text-white hover:bg-white hover:text-green-900 hover-smooth rounded-md px-4 py-2 text-md font-medium">TEAM</a>
+                      <a href="#" class="text-white hover:bg-white hover:text-green-900 hover-smooth rounded-md px-4 py-2 text-md font-medium">ARTICLE</a>
+                      <a href="galery.html" class="text-white hover:bg-white hover:text-green-900 hover-smooth rounded-md px-4 py-2 text-md font-medium">GALERY</a>
+                      <a href="#" class="text-white hover:bg-white hover:text-green-900 hover-smooth rounded-md px-4 py-2 text-md font-medium">SHOP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login basis-1/4 flex justify-center items-center">
+                <a href="#" class="hidden sm:block hover-smooth text-white border border-white hover:bg-white hover:text-green-800  rounded-md px-7 py-2.5 text-sm font-bold">Login</a>
+            </div>
+
+            <div class="xl:hidden md:hidden button-auth flex items-center mr-7 px-1 py-0.5 border border-white rounded-md">
+                <ion-icon onclick="onToggle(this)" name="menu" class="text-3xl text-white hover:cursor-pointer md:hidden"></ion-icon>
+            </div>
+
+        </div>
+    </div>
+
+    <section id="content" class="content">
+        <div class="container mx-auto">
+            <div class="flex justify-center">
+                <img class="mt-10 rounded-md w-full" src="https://cdn.nba.com/teams/uploads/sites/1610612749/2024/01/IPTV_FULL_All-StarDuo_Analytics_1920x1080.jpg">
+            </div>
+            <p class="mt-10 font-bold text-4xl text-green-900">Why Giannis Antetokounmpo and Damian<br>Lillard Should be All-Star Starters</p>
+            <hr class="mt-10 bg-yellow-400 h-1">
+            <div id="penulis" class="w-full py-7 flex flex-grow">
+                <p class="basis-1/2 font-semibold ml-8 flex justify-start items-center">Michel Naufal Azriel</p>
+                <p class="basis-1/2 hidden sm:ml-1 sm:block"></p>
+                <p class="basis-1/5 hidden sm:ml-1 sm:block"></p>
+                <p class="basis-1/2 font-semibold flex items-center justify-center sm:ml-0 sm:flex">January 20, 2024<span class="ml-5 font-normal">15:00 PM CST<i class="fa-solid fa-link ml-5 p-3 border-2 border-green-900 rounded-full hover:bg-green-900 hover-smooth cursor-pointer"></i></span></p>
+            </div>
+            <hr class="bg-yellow-400 h-1">
+
+            <div class="isiberita w-full">
+                <div class="respons ">
+                    <p class="mt-10 font-normal">The date is November 3rd. The Milwaukee Bucks have been in a dog fight all night long against the New York Knicks, and they are down by two with just over a minute to go. So what do they do? They inbound the ball to Giannis Antetokounmpo above the break, and he dribbles towards the corner, where Damian Lillard is stationed. Lillard scampers away from him towards the rim before looping back out and curling around Antetokounmpo behind the arc. Antetokounmpo leaves the ball behind him, and in one motion Lillard gathers it, turns, and lofts it towards the rim. Ball game. The Bucks take the lead, get a stop, and go on to close the game out with free throws.</p>
+                    <p class="mt-10">That's just what All-Stars do.</p>
+                    <p class="mt-10">Well -- they aren't yet. But they should be.</p>
+                    <p class="mt-10">Only <span class="underline cursor-pointer text-blue-900">10 Seasons </span>have ever been recorded in which a player averaged at least 30 points, 10 rebounds, and 5 assists per game. The list is populated exclusively by Hall of Famers, like Wilt Chamberlain or Kareem Abdul-Jabbar, or surefire future Hall of Famers, like Antetokounmpo himself, who accomplished the feat last year. And right now, Antetokounmpo is at 31.2 points, 11.5 rebounds, and 5.9 assists per game to go along with 1.3 steals and 1.2 blocks -- which has never been done before. And of those 10 seasons, zero failed to result in All-Star selections. (Joel Embiid, also this season, is hitting those 30-10-5 benchmarks, and like Antetokounmpo is very deserving of the accolade.)</p>
+                    <p class="mt-10">Similarly, there have only been <span class="underline text-blue-900 cursor-pointer">106 Seasons </span>recorded in which a player has averaged at least 25 points, 4 rebounds, and 6 assists per game. Of those, not including the players to do so this year, only four failed to result in an All-Star berth. Like Antetokounmpo, Lillard missing the All-Star game this season would be virtually unprecedented. </p>
+                    <p>Beyond their statistical resumes, the two are mainstays of the game itself, both with seven attendances apiece -- tied for the <span class="underline text-blue-900 cursor-pointer">10th most among active players</span>. Antetokounmpo hasn't missed an All-Star game since 2017. The only game Lillard has missed since 2018 was in 2022 due to his aforementioned injury. The two even ranked <span class="underline text-blue-900 cursor-pointer">first and second in points in the All-Star game in 2021.</span></p>
+                    <iframe class="w-full mt-10 rounded-md" height="750" src="https://www.youtube.com/embed/_af5-Dhux_Q" title="Giannis Antetokounmpo 2022 NBA All-Star Game Highlights | 30 Points For Team LeBron | 2.20.22" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p class="mt-10">There is precedence for superstars of this magnitude combining their talents -- but it is rare.</p>
+                    <p class="mt-10">When the Miami Heat brought together LeBron James and Dwayne Wade in 2010-11, they went 9-8 to start the season before eventually finishing with 58 wins. Combining such talents takes time. That the Bucks are 26-12  -- which is on pace for 56 wins -- so far shows the flexibility of their stars; however, make no mistake: like the Heat more than a decade before, these Bucks are only getting better as the season ages and their stars adapt to new circumstances.</p>
+                    <p class="mt-10">Lillard and Antetokounmpo are not simply achieving separate success, with unique stat lines and interchangeable domination. More than that, they have fused together their games to create new forms and approaches beyond how either of them have played in years past. 
+                    </p>
+                    <p class="mt-10">Lillard's 74 assists to Antetokounmpo ranks ninth among all NBA combos; neither was a member of such a highly ranked combo last year. Lillard to Jusuf Nurkic ranked 59th among all combos last year, while Jrue Holiday to Antetokounmpo ranked 25th. And with Lillard's spacing and passing on the team, Antetokounmpo is finding more of his baskets created by his teammates. Last year, <span class="underline text-blue-900 cursor-pointer">42.9 percent of his field goals were assisted.</span> This year, that has risen to 50.7 percent. With one of the game's best guards now a teammate, Antetokounmpo's 'guard' possessions are less frequent, running fewer picks and isolating less often, while his 'big' possessions are up, setting more screens. His post game has never been sharper, setting a career high in efficiency and ranking fifth in the league among players with at least 40 post-ups. </p>
+                    <iframe class="w-full mt-10 rounded-md" height="750" src="https://www.youtube.com/embed/co04yBTYgRM" title="Highlights: Damian Lillard 25 Points, 10 Assists vs. the Spurs | 1.4.24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p class="mt-10">At the same time, Lillard has embraced his off-ball game to greater impact alongside the <span class="underline text-blue-900">most dominant interior scorer since Shaquille O'Neal.</span> He's averaging his fewest touches per 100 possessions of his career, while also averaging the highest points per chance on a touch. And he's also been terrific without the ball in his hands; an off-ball cut from Lillard is more efficient this year than any other of his career. Among all players with 200 or more off-screen cuts, Lillard ranks 13th in points per chance on such plays. And they are even more efficient when it's Lillard's co-star, Antetokounmpo, setting the screen.</p>
+                    <p class="mt-10">Lillard and Antetokoumpo are thriving together and separately, succeeding in areas they already mastered and in new ones.</p>
+                    <p class="mt-10">All signs point to Lillard and Antetokounmpo continuing together the All-Star streaks that they began separately. It's actually relatively common for one team to roster multiple All Stars -- particularly for the Bucks. Milwaukee has rostered two All Stars in four of the last five seasons.</p>
+                    <p class="mt-10">Over the last five seasons, 27 teams have rostered at least two players who played in that year's All-Star game, with two of them rostering three. That averages to mean approximately five teams, each year, will have multiple All Stars. Of course, those teams usually win lots of games. Their average winning percentage is 64.5 percent -- below Milwaukee's current rate of 68.4 percent.</p>
+                    <p class="mt-10">Milwaukee has the profile of a team that sends two (or more) players to the All-Star game. And its stars, Lillard and Antetokounmpo have historically not only gone to the game but dominated it. Furthermore, their play this season has been deserving of All-Star nods, both as separate engines and as a complementary duo. (Actually, they've been deserving of All-NBA nods -- but we'll save that conversation for another time.)</p>
+                    <p class="mt-10">All the evidence points in one direction: Send Lillard and Antetokounmpo to the All-Star game. What they began separately, now they continue together. It's where their union began, as <span class="underline text-blue-900">teammates for the first time in 2018.</span> And it's where their partnership ought to lead.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="h-1 bg-black mt-10">
+
+    <script>
+        const navbarItems = document.querySelector('.nav-items')
+        function onToggle(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navbarItems.classList.toggle('right-[0]')
+        }
+    </script>
+</body>
+</html>
