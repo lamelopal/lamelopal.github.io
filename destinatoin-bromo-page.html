@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script src="script.js?v=1.0"></script>
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/ba2edaa873.js" crossorigin="anonymous"></script>
+    <title>Destination Bromo Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateY(0);
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+            opacity: 1;
+        }
+
+        .navbar-static {
+            position: static;
+            opacity: 1;
+            transition: opacity 0.6s ease-in-out;
+        }
+
+        .navbar-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding: 15rem;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Lexend';">
+    <nav id="navbar" class="w-full z-50 navbar-static bg-white shadow-md transition-opacity duration-500 ease-in-out"
+        style="font-family: 'Lexend';">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="landing-page.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <i
+                    class="text-4xl text-[#2d9b9a] hover:text-[#1f7171] transition-all duration-300 hover:scale-95 fa-solid fa-circle-arrow-left"></i>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-3 rtl:space-x-reverse">
+
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-900 rounded-lg md:hidden hover:bg-gray-100"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#2d9b9a] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:bg-white"
+                    style="font-family: 'Lexend';">
+                    <li>
+                        <a href="#" style="text-underline-offset: 10px;"
+                            class="md:underline block py-2 px-3 md:p-0 text-white md:border-none border-2 border-black rounded bg-[#298d8b] md:bg-transparent md:text-[#2D9B9A]"
+                            aria-current="page">Info</a>
+                    </li>
+                    <li>
+                        <a href="#why-bali-page"
+                            class="block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Why
+                            Bromo</a>
+                    </li>
+                    <li>
+                        <a href="#tours-page"
+                            class="block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Tours</a>
+                    </li>
+
+                    <li>
+                        <a href="#look-page"
+                            class="block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Look
+                            Here</a>
+                    </li>
+                    <li>
+                        <a href="landing-page.html#contact-page"
+                            class="block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="flex items-center justify-center mt-5">
+        <div id="image-area" class="md:w-[95%] w-[90%] h-[30rem] md:h-[35rem] overflow-hidden rounded-3xl">
+            <img class="relative z-10 w-full h-full object-cover brightness-75 object-[center_40%]"
+                src="assets/image-8.jpg">
+        </div>
+        <div id="target"
+            class="text-center absolute shadow-xl z-20 md:w-[95%] w-[90%] h-[30rem] md:h-[35rem] overflow-hidden rounded-3xl flex flex-col justify-center items-center">
+            <p class="md:text-4xl text-2xl text-white font-semibold mx-3">OUR TRIP DESTINATION IS</p>
+            <p class="text-white mt-4 font-semibold text-5xl md:text-9xl">BROMO MOUNTAIN</p>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center mt-20" style="font-family: 'Lexend';">
+        <div id="target" class="flex flex-col md:items-start md:justify-start justify-center items-center w-[85%]">
+            <p class="text-lg text-[#2d9b9a]">REASONS</p>
+            <div class="mt-8 w-full flex flex-col md:flex-row justify-between items-center">
+                <p id="why-bali-page" class="to-gray-900 font-semibold text-3xl text-gray-900 md:text-left text-center">
+                    Four Reasons Why You Should Visit Bromo Mountain
+                </p>
+                <p class="font-medium text-gray-400 hover:underline"><i
+                        class="mr-3 md:mt-0 mt-5 fa-solid fa-arrow-pointer"></i>Hover
+                    the image</p>
+            </div>
+            <div class="container mt-14 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-500 shadow-xl hover:shadow-none">
+                    <img class="object-cover object-center w-full h-full rounded-xl" src="assets/image-5.jpg">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Adventurous Jeep Tours</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Explore the dramatic landscapes around Mount
+                                Bromo with an exhilarating Jeep tour that takes you across the Sea of Sand and up to the
+                                viewpoints. </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-500 shadow-xl hover:shadow-none">
+                    <img class="object-cover w-full h-full rounded-xl object-top" src="assets/image-75.jpg">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Star Gazing</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Enjoy the clear night skies over Bromo, which
+                                provide excellent stargazing opportunities far away from city lights and light
+                                pollution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-500 shadow-xl hover:shadow-none">
+                    <img class="object-cover w-full h-full rounded-xl object-[center_20%]" src="assets/image-76.jpg">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Photography Opportunities</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Capture stunning photographs of the volcanic
+                                scenery, including the sunrise, crater, and panoramic views that are perfect for any
+                                photography enthusiast.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-500 shadow-xl hover:shadow-none">
+                    <img class="object-cover w-full h-full rounded-xl object-center" src="assets/image-77.jpg">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Unique Volcanic Landscape</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Experience the otherworldly terrain of the Bromo
+                                Tengger Semeru National Park, including the vast Sea of Sand and the iconic smoking
+                                crater of Mount Bromo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center mt-20" style="font-family: 'Lexend';">
+        <div class="flex flex-col md:items-start md:justify-start justify-center items-center w-[85%]">
+            <p class="text-lg text-[#2d9b9a]">TOURS</p>
+            <p id="main-subtitle" class="font-semibold mt-8 text-3xl text-gray-900 md:text-left text-center">
+                Journeys Provided by Our Agency
+            </p>
+            <div id="tours-page" class="container mx-auto mt-14">
+                <div class="flex flex-col md:flex-row justify-between md:space-x-4 space-x-0">
+                    <div class="left-section md:w-1/2 flex-1 relative">
+                        <img id="main-image" class="w-[100%] h-[28rem] object-cover object-bottom rounded-3xl"
+                            src="assets/image-34.jpg">
+                        <div class="absolute inset-0 flex items-end justify-end p-5">
+                            <p id="main-image-label"
+                                class="text-white font-medium border-2 border-gray-900 text-lg bg-[#1f7171] rounded-lg text-center p-3">
+                                SELECT YOUR TOUR
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right-section md:w-1/2 mt-4 md:mt-0 flex-1 flex flex-col space-y-4">
+                        <div class="flex flex-col space-y-5 h-full items-start justify-center">
+                            <div id="area-1" data-image="assets/image-8.jpg" data-journey-image="assets/image-81.jpg"
+                                data-title="BROMO FULL DAY" data-day="DAY 1" data-location="TO BROMO MOUNTAIN"
+                                data-description="Start your day early by heading to Penanjakan Viewpoint to catch the stunning sunrise over Mount Bromo, Mount Batok, and Mount Semeru. Enjoy the breathtaking views as the sun rises over the volcanic landscape. Spend some time at the Whispering Sands, a vast sandy plain that offers a unique and desert-like atmosphere. Enjoy the serene beauty and take some memorable photos."
+                                class="cursor-pointer flex rounded-2xl flex-row hover:border-2 border-gray-900 w-full bg-white hover:bg-[#1f7171] hover:text-white text-gray-900 transition-all duration-300">
+                                <div class="left-section flex justify-center items-center w-1/3 px-1 md:px-10">
+                                    <p class="font-medium">1 / 08</p>
+                                </div>
+                                <div class="right-section flex-1 p-4 flex flex-col space-y-2">
+                                    <p class="font-medium">BROMO FULL DAY</p>
+                                    <p class="text-sm">Experience the best of Bromo Mountain</p>
+                                    <a href="#route-page">
+                                        <p class="flex justify-start items-center text-sm">
+                                            <i class="text-lg mr-5 fa-solid fa-arrow-right-long"></i>VIEW ROUTE
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div id="area-2" data-image="assets/image-78.jpg" data-journey-image="assets/image-79.jpg"
+                                data-title="2-DAY BROMO ESCAPADE" data-day="DAY 1" data-location="TO BROMO CRATER"
+                                data-description="Arrive at the Mount Bromo area and check in at your hotel. Prepare for an exciting adventure over the next two days. Spend your afternoon visiting local Tengger villages. Experience the unique culture and traditions of the Tengger people. Head to Penanjakan Viewpoint for a stunning sunset view over Mount Bromo, Mount Batok, and Mount Semeru. Enjoy the magical colors of the sunset."
+                                class="cursor-pointer flex rounded-2xl flex-row hover:bg-[#1f7171] hover:border-2 hover:border-black text-gray-900 hover:text-white w-full transition-all duration-300">
+                                <div class="left-section flex justify-center items-center w-1/3 px-1 md:px-10">
+                                    <p class="font-medium">6-8 / 08</p>
+                                </div>
+                                <div class="right-section flex-1 p-4 flex flex-col space-y-2">
+                                    <p class="font-medium">2-DAY BROMO ESCAPADE</p>
+                                    <p class="text-sm">Explore Bromo Crater</p>
+                                    <a href="#route-page">
+                                        <p class="flex justify-start items-center text-sm">
+                                            <i class="text-lg mr-5 fa-solid fa-arrow-right-long"></i>VIEW ROUTE
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div iid="area-3" data-image="assets/image-80.jpg" data-journey-image="assets/image-15.jpg"
+                                data-title="BROMO CLASSIC TOUR 4 DAYS" data-day="DAY 1"
+                                data-location="TO WAE REBO VILLAGE"
+                                data-description="Arrive in the Mount Bromo area and check in at your hotel. Take some time to rest and prepare for the upcoming adventures. Visit local Tengger villages to experience the unique culture and traditions of the Tengger people. Explore traditional homes and learn about local customs. Depart early to reach Penanjakan Viewpoint for a spectacular sunrise over Mount Bromo, and Mount Semeru."
+                                class="cursor-pointer flex rounded-2xl flex-row hover:border-2 border-gray-900 w-full bg-white hover:bg-[#1f7171] hover:text-white text-gray-900 transition-all duration-300">
+                                <div class="left-section flex justify-center items-center w-1/3 px-1 md:px-10">
+                                    <p class="font-medium">2-6 / 08</p>
+                                </div>
+                                <div class="right-section flex-1 p-4 flex flex-col space-y-2">
+                                    <p class="font-medium">BROMO CLASSIC TOUR 4 DAYS</p>
+                                    <p class="text-sm">Explore the Mysteries of Bromo Mountain</p>
+                                    <a href="#route-page">
+                                        <p class="flex justify-start items-center text-sm">
+                                            <i class="text-lg mr-5 fa-solid fa-arrow-right-long"></i>VIEW ROUTE
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="route-page" class="flex justify-center items-center mt-20">
+        <div class="w-[85%] md:text-left text-center flex flex-col md:items-start md:justify-start">
+            <p id="journey-route" class="text-lg text-[#2d9b9a]">JOURNEY ROUTE</p>
+            <p id="journey-title" class="text-gray-900 font-semibold text-3xl mt-8 md:text-left text-center">
+                SELECT YOUR TOUR
+            </p>
+            <section class="flex flex-col md:flex-row w-full mt-8">
+                <div class="left-section md:w-1/2 w-full">
+                    <div class="flex flex-col md:justify-start md:items-start justify-center items-center">
+                        <p id="journey-day" class="font-medium text-xl text-gray-900">DAY 1</p>
+                        <p id="journey-location" class="font-semibold text-2xl mt-5 text-[#2d9b9a]">SELECT YOUR TOUR</p>
+                        <p id="journey-description" class="md:mr-40 mt-3 md:text-left text-center text-gray-900">Depart
+                            from Labuan Bajo early in the morning and head to Padar Island by speedboat. Upon arrival,
+                            begin your hike to the top of Padar Island to enjoy the panoramic views of its three-colored
+                            beaches. After reaching the summit, take time to explore the beaches of Padar Island. Relax
+                            on the sand or take a swim in the clear waters.</p>
+                        <a href="#detail-page">
+                            <p class="text-sm font-medium mt-8 flex justify-start items-center text-gray-900"><i
+                                    class="text-lg mr-5 fa-solid fa-arrow-right-long"></i>LOOK FOR DETAILS</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="right-section md:w-1/2 w-full mt-10 md:mt-0">
+                    <img id="journey-image" src="assets/image-36.jpg"
+                        class="w-full h-[19rem] rounded-2xl object-center object-cover">
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center mt-20">
+        <div class="flex flex-col w-[85%] md:justify-start md:items-start justify-center items-center">
+            <p class="text-[#2d9b9a] text-lg">LOOK HERE</p>
+            <p id="detail-page" class="text-3xl text-gray-900 font-semibold mt-8 md:text-left text-center">What you’ll
+                find in Bromo</p>
+            <section class="flex flex-col md:flex-row w-full mt-8 md:mt-14">
+                <!-- Bagian Kiri -->
+                <div id="look-page" class="left-section md:w-1/2 w-full">
+                    <p class="text-gray-900 md:text-left text-center mr-0 md:mr-20">Mount Bromo, located in East Java,
+                        Indonesia, is a captivating destination that draws travelers from around the world with its
+                        dramatic landscapes and unique geological features. Nestled within the Bromo Tengger Semeru
+                        National Park, this active volcano offers a variety of experiences for visitors to explore.
+                        The journey to Mount Bromo typically begins with a visit to Penanjakan Viewpoint, a renowned
+                        spot for witnessing the stunning sunrise over the volcanic landscape. From this vantage point,
+                        visitors are treated to a panoramic view of Mount Bromo, Mount Batok, and the towering Mount
+                        Semeru, all bathed in the golden hues of the morning sun.</p>
+
+                    <section class="flex flex-col md:flex-row w-full md:w-[85%] mt-10">
+                        <div class="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0">
+                            <div class="left-section md:w-1/2 w-full">
+                                <p class="font-semibold text-lg text-[#2d9b9a] text-center md:text-left">Sunrise at
+                                    Penanjakan Viewpoint
+                                </p>
+                                <p class="text-sm text-gray-600 mt-2 text-center md:text-left">One of the most iconic
+                                    experiences at Mount Bromo is witnessing the sunrise from Penanjakan Viewpoint.</p>
+                            </div>
+                            <div class="right-section md:w-1/2 w-full">
+                                <p class="font-semibold text-lg text-[#2d9b9a] text-center md:text-left">Exploring Bromo
+                                    Crater</p>
+                                <p class="text-sm text-gray-600 mt-2 text-center md:text-left">The Bromo Crater itself
+                                    is a standout feature of Mount Bromo. This active crater allows visitors to see
+                                    steam and smoke emanating from its vents.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="right-section bg-white md:w-1/2 w-full md:mt-0 mt-10">
+                    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                        <div class="relative h-[10rem] overflow-hidden rounded-lg md:h-[26rem]">
+                            <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                                <img src="assets/image-75.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            </div>
+                            <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                                <img src="assets/image-76.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            </div>
+                            <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                                <img src="assets/image-5.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            </div>
+                            <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                                <img src="assets/image-77.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            </div>
+                            <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                                <img src="assets/image-80.jpg"
+                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center mt-20">
+        <div class="w-[85%] flex flex-col md:justify-start md:items-start justify-center items-center">
+            <p class="text-lg text-[#2d9b9a]">PART OF THE SCENE</p>
+            <p class="text-3xl font-semibold mt-8 text-gray-900 md:text-left text-center">Traveler’s Image Collection
+            </p>
+            <section class="flex items-center justify-start mt-8 md:mt-14 w-full">
+                <div class="flex h-full w-full overflow-x-auto">
+                    <div class="flex flex-nowrap w-[25rem] h-[25rem] space-x-5">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-82.jpg">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-83.jpg">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-84.jpg">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-85.jpg">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-86.jpg">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-76.jpg">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-78.jpg">
+                        <img class="rounded-3xl object-cover h-full flex-shrink-0" src="assets/image-80.jpg">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center mt-20">
+        <div class="w-[85%] flex flex-col md:justify-start md:items-start justify-center items-center">
+            <p class="text-lg text-[#2d9b9a]">RESPONSE</p>
+            <p class="text-gray-900 mt-8 text-3xl font-semibold md:text-left text-center md:w-[50rem] w-auto">Submit
+                your
+                review about your travel experience through our website.</p>
+            <section id="plan-page"
+                class="w-full border-2 rounded-2xl border-gray-900 flex justify-center items-center mt-8">
+                <div class="w-full">
+                    <div class="flex flex-col md:flex-row gap-x-2 items-stretch rounded-2xl">
+                        <div class="w-full md:w-1/2 md:p-10 p-7">
+                            <p class="text-gray-900 font-semibold text-4xl md:w-80 w-auto">Leave Feedback About Your
+                                Trip</p>
+                            <div class="max-w-full mt-10">
+                                <input placeholder="Your Name" type="text" id="base-input"
+                                    class="bg-transparent border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-[#1f7171] focus:border-[#1f7171] block w-full p-3">
+                            </div>
+                            <div class="max-w-full mt-7">
+                                <input placeholder="Your Number" type="number" id="base-input"
+                                    class="bg-transparent border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-[#1f7171] focus:border-[#1f7171] block w-full p-3">
+                            </div>
+                            <form class="max-w-full mt-7">
+                                <textarea id="message" rows="4"
+                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-900 focus:ring-[#1f7171] focus:border-[#1f7171]"
+                                    placeholder="Leave a comment..."></textarea>
+                            </form>
+
+                            <label class="mt-5 inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer">
+                                <div
+                                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#2d9b9a] rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-[#1f7171] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#1f7171]">
+                                </div>
+                                <span class="ms-3 text-sm text-gray-900">Agree with privacy policy</span>
+                            </label>
+                            <a href="#">
+                                <p
+                                    class="max-w-[15rem] text-white text-sm mt-7 rounded-xl py-4 font-medium flex justify-center items-center text-center bg-[#2d9b9a] transition-all duration-300 hover:scale-95">
+                                    SUBMIT</p>
+                            </a>
+                        </div>
+
+                        <div class="w-full md:w-1/2 p-10 md:block hidden">
+                            <div class="md:w-[34rem] md:h-[31rem] w-[20rem h-[16rem]]">
+                                <img class="w-full h-full object-cover object-bottom rounded-3xl"
+                                    src="assets/image-51.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer class="mt-20 bg-[#1f7171] rounded-sm">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 md:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <img class="w-40" src="logo-white.png" alt="Logo">
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Top Destinations</h2>
+                        <ul class="text-stone-300 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Bali</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Labuan Bajo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Information</h2>
+                        <ul class="text-stone-300 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline ">Help & FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Follow Us</h2>
+                        <ul class="text-stone-300 font-medium">
+                            <li class="mb-4">
+                                <a href="https://www.instagram.com/naufalazrieel/" class="hover:underline">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/naufal-azriel-al-azizy-3ab625283/"
+                                    class="hover:underline">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-white mx-auto md:my-8" />
+            <div class="flex justify-center items-center">
+                <span class="text-sm text-white text-center">© 2024 <a href="#" class="hover:underline">INDONESIA
+                        PARADISE™</a>.
+                    All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            const targetSection = document.getElementById('target');
+            const targetPosition = targetSection.getBoundingClientRect().top;
+
+            if (targetPosition <= 0) {
+                navbar.classList.remove('navbar-static', 'navbar-hidden');
+                navbar.classList.add('navbar-fixed');
+            } else if (window.scrollY === 0) {
+                navbar.classList.remove('navbar-fixed', 'navbar-hidden');
+                navbar.classList.add('navbar-static');
+            } else {
+                navbar.classList.remove('navbar-fixed');
+                navbar.classList.add('navbar-hidden');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tourOptions = document.querySelectorAll('.cursor-pointer');
+            const mainImage = document.getElementById('main-image');
+            const mainImageLabel = document.getElementById('main-image-label');
+            const journeyImage = document.getElementById('journey-image');
+            const journeyTitle = document.getElementById('journey-title');
+            const journeyDay = document.getElementById('journey-day');
+            const journeyLocation = document.getElementById('journey-location');
+            const journeyDescription = document.getElementById('journey-description');
+
+            tourOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    // Get data attributes from clicked tour option
+                    const image = option.getAttribute('data-image');
+                    const journeyImageSrc = option.getAttribute('data-journey-image');
+                    const title = option.getAttribute('data-title');
+                    const day = option.getAttribute('data-day');
+                    const location = option.getAttribute('data-location');
+                    const description = option.getAttribute('data-description');
+
+                    // Update main image and label
+                    mainImage.src = image;
+                    mainImageLabel.textContent = title;
+
+                    // Update journey-route section
+                    journeyTitle.textContent = title;
+                    journeyDay.textContent = day;
+                    journeyLocation.textContent = location;
+                    journeyDescription.textContent = description;
+                    journeyImage.src = journeyImageSrc;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
