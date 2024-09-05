@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <script src="script.js?v=1.0"></script>
+    <link rel="stylesheet" href="styles.css?v=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/ba2edaa873.js" crossorigin="anonymous"></script>
+    <title>Landing Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateY(0);
+            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+            opacity: 1;
+        }
+        .navbar-static {
+            position: static;
+            opacity: 1;
+            transition: opacity 0.6s ease-in-out;
+        }
+        .navbar-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding: 15rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar" class="w-full z-50 navbar-static bg-white shadow-md transition-opacity duration-500 ease-in-out"
+        style="font-family: 'Lexend';">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="logo-black.png" class="h-8" alt="Logo" />
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-3 rtl:space-x-reverse">
+
+                <button type="button"
+                    class="md:flex md:items-center md:justify-center hidden text-[#2d9b9a] transition duration-300 font-medium rounded-full text-sm text-center"><i
+                        class="fa-solid fa-globe"></i></button>
+
+                <button id="dropdownHoverButton1" data-dropdown-toggle="dropdownHover1" data-dropdown-trigger="hover"
+                    class="font-medium text-gray-900 hover:text-[#2d9b9a] md:inline-flex hidden transition duration-300 rounded-lg pr-0 pl-1 py-2.5 text-center items-center"
+                    type="button">English
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+
+                <div id="dropdownHover1"
+                    class="z-30 hidden bg-white divide-y divide-gray border-2 border-gray-900 rounded-lg">
+                    <ul class="py-2 text-gray-500" aria-labelledby="dropdownHoverButton1">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 font-medium hover:bg-gray-100 hover:text-[#2d9b9a] transition duration-300">Indonesia</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <button id="dropdownHoverButton2" data-dropdown-toggle="dropdownHover2" data-dropdown-trigger="hover"
+                    class="text-gray-900 font-medium hover:text-[#2d9b9a] md:inline-flex hidden transition duration-300 px-4 py-2.5 text-center items-center"
+                    type="button">USD
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
+
+                <div id="dropdownHover2"
+                    class="z-30 hidden bg-white divide-y divide-gray-100 rounded-lg border-2 border-gray-900">
+                    <ul class="py-2 text-gray-500" aria-labelledby="dropdownHoverButton2">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 hover:text-[#2d9b9a] transition duration-300">IDR</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <button type="button"
+                    class="text-black md:block hidden bg-gray-200 hover:scale-95 shadow-sm hover:bg-gray-300 transition duration-300 font-medium rounded-full text-sm py-3 px-[14px] text-center"><i
+                        class="fa-solid fa-cart-shopping"></i></button>
+
+                <button type="button"
+                    class="text-white bg-[#2D9B9A] shadow-md hover:scale-95 hover:bg-[#1f7171] transition duration-300 font-medium rounded-3xl text-sm px-5 py-3 text-center"
+                    style="font-family: 'Lexend';">Sign in</button>
+
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-900 rounded-lg md:hidden hover:bg-gray-100"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#2d9b9a] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:bg-white"
+                    style="font-family: 'Lexend';">
+                    <li>
+                        <a href="#" style="text-underline-offset: 10px;"
+                            class="md:underline block py-2 px-3 md:p-0 text-white md:border-none border-2 border-black rounded bg-[#298d8b] md:bg-transparent md:text-[#2D9B9A]"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#destination-page"
+                            class="block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Destinations</a>
+                    </li>
+                    <li>
+                        <a href="#article-page"
+                            class="block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Article</a>
+                    </li>
+
+                    <li>
+                        <a href="#why-us-page"
+                            class="block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Why
+                            us?</a>
+                    </li>
+                    <li>
+                        <a href="#contact-page"
+                            class="md:mr-32 block py-2 px-3 md:p-0 text-white md:mt-0 mt-2 md:border-none border-black md:text-gray-900 hover:border-2 hover:bg-[#298d8b] hover:text-gray-900 rounded md:hover:bg-transparent md:hover:text-[#2D9B9A] transition duration-150 md:duration-300">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="flex items-center justify-center mt-5">
+        <div id="image-area" class="md:w-[95%] w-[90%] h-[30rem] md:h-[35rem] overflow-hidden rounded-3xl">
+            <img src="assets/image-1.jpg" class="relative z-10 w-full h-full bg-cover object-cover brightness-75"
+                loading="eager">
+        </div>
+        <div id="text-area"
+            class="text-left absolute shadow-md shadow-stone-400 z-20 md:w-[95%] w-[90%] h-[30rem] md:h-[35rem] overflow-hidden rounded-3xl flex flex-col justify-center items-center">
+            <div id="penengah" class="flex flex-col md:justify-start md:items-start justify-center items-start">
+                <p class="md:text-6xl md:mx-0 mx-3 text-2xl font-semibold md:font-medium text-white md:leading-[4rem] leading-[2rem]"
+                    style="font-family: 'Lexend';">Infinite
+                    Adventures.<br>Just One
+                    Click.</p>
+                <p class="text-white md:mx-0 mx-3 md:text-lg text-base font-semibold md:font-medium md:mt-5 mt-3 md:w-auto w-72"
+                    style="font-family: 'Lexend';">Keep the Fun
+                    Going, Anytime, Anywhere</p>
+                <div class="flex justify-center items-center w-full">
+                    <div id="search-bar" class="mt-8 md:rounded-full rounded-xl md:w-auto w-[95%] bg-white"
+                        style="font-family: 'Lexend';">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="flex items-center whitespace-normal md:pr-44 md:py-5 pb-4 pt-7 text-left">
+                                <div class="md:ml-7 ml-5 mr-5 text-2xl items-center flex justify-center">
+                                    <i class="text-gray-500 fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-base font-semibold text-gray-900">Where To?</p>
+                                    <a href="#">
+                                        <p class="text-gray-500 hover:text-gray-700 transition duration-300">Search a
+                                            place
+                                            or activity</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="target-section"
+                                class="flex items-center whitespace-normal md:pr-44 md:py-5 py-4 text-left">
+                                <div class="mx-5 text-2xl items-center flex justify-center">
+                                    <i class="text-gray-500 fa-regular fa-calendar"></i>
+                                </div>
+                                <div>
+                                    <p class="text-base font-semibold text-gray-900">When?</p>
+                                    <a href="#">
+                                        <p class="text-gray-500 hover:text-gray-700 transition duration-300">19/06/2024
+                                            -
+                                            19/06/2024</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="target" class="flex text-white md:pl-2 md:pr-4 justify-center items-center">
+                                <button type="submit"
+                                    class="md:hidden font-medium hover:scale-95 flex text-left md:px-24 px-20 py-3 mt-3 mb-7 rounded-xl bg-[#2d9b9a] hover:bg-[#1f7171] transition duration-300">
+                                    Search</button>
+                                <a href="#"><i
+                                        class="md:flex hover:scale-90 hidden rounded-full px-4 py-3 bg-[#2d9b9a] hover:bg-[#1f7171] transition duration-300 md:text-2xl text-xl fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="flex flex-col justify-center items-center md:mt-20 mt-16" style="font-family: 'Lexend';">
+        <div class="w-[85%] flex flex-col items-center justify-center">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row md:justify-between">
+                    <div class="flex flex-col items-center md:items-start w-full md:w-[50%] mb-10 md:mb-0">
+                        <p class="text-lg text-[#2d9b9a]">REASONS</p>
+                        <p class="font-semibold text-3xl text-gray-900 w-full md:w-full mt-8 text-center md:text-left">
+                            Four Reasons Why Indonesia Is a Paradise You Must Visit
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center md:items-end w-full md:w-[50%] md:ml-20">
+                        <p class="text-gray-500 text-sm text-center md:text-left md:ml-24">
+                            As one of the most fascinating tourist spots globally, Indonesia boasts a diverse range of
+                            attractions, from stunning beaches to vibrant cultural festivals, making it a must-visit
+                            destination. ( Hover image for know )
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-14 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-300 shadow-md shadow-stone-300 hover:shadow-none">
+                    <img src="assets/image-2.jpg" class="object-cover w-full h-full rounded-xl">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Exotic Island</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Offering more than 17,000 islands, Indonesia is a
+                                land of varied island destinations, each with its own unique beauty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-300 shadow-md shadow-stone-300 hover:shadow-none">
+                    <img src="assets/image-3.jpg" class="object-cover w-full h-full rounded-xl object-[center_72%]">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Extraordinary Natural Beauty</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Indonesia boasts a diverse range of stunning
+                                natural landscapes, from exotic tropical beaches to majestic mountains and dense
+                                rainforests.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-300 shadow-md shadow-stone-300 hover:shadow-none">
+                    <img src="assets/image-4.jpg" class="object-cover w-full h-full rounded-xl object-[center_10%]">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Traditional Architecture's Charm</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Balinese homes and temples are rich in cultural
+                                heritage, featuring intricate designs that reflect deep spiritual symbolism and unique
+                                artistic craftsmanship.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="relative flex items-center justify-center h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition duration-300 shadow-md shadow-stone-300 hover:shadow-none">
+                    <img src="assets/image-5.jpg" class="object-cover w-full h-full rounded-xl object-[center_50%]">
+                    <div
+                        class="absolute inset-0 flex items-end justify-start bg-black bg-opacity-50 opacity-0 hover:opacity-90 transition-opacity duration-500">
+                        <div class="flex flex-col p-6">
+                            <p class="text-white text-xl font-medium">Diverse Outdoor Adventures</p>
+                            <p class="text-white text-sm w-[70%] mt-3">Indonesia offers thrilling activities like
+                                volcano hiking, snorkeling, deep-sea diving, and surfing for adventure seekers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="destination-page"
+            class="w-[85%] mt-20 md:justify-start md:items-start justify-center items-center flex flex-col">
+            <p class="text-lg text-[#2d9b9a]">DESTINATIONS</p>
+            <div class="flex flex-col md:flex-row mt-8 w-full justify-between items-center">
+                <p class="text-3xl md:text-left text-center text-gray-900 font-semibold">Top Choice Activities</p>
+                <a href="#see-detail-page">
+                    <p
+                        class="md:mt-0 mt-5 text-sm hover:bg-[#2d9b9a] hover:text-white transition-all duration-300 text-right font-medium py-2 px-5 border-2 border-[#1f7171] rounded-full">
+                        Read Full Details</p>
+                </a>
+            </div>
+            <div class="container mx-auto mt-14">
+                <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
+                    <div class="bg-white overflow-hidden">
+                        <img src="assets/image-6.jpg" class="w-full rounded-2xl h-96 object-cover">
+                        <div class="p-2">
+                            <p class="text-xl text-gray-900 font-medium my-3">Flash Sale Discover Hidden Bali</p>
+                            <p class="font-normal text-gray-900"><i
+                                    class="mr-3 mb-5 text-[#1f7171] fa-solid fa-location-dot"></i>Bali, Indonesia</p>
+                            <div id="area-rating" class="flex justify-between items-center">
+                                <p class="text-base text-gray-900"><i
+                                        class="mr-4 fa-regular fa-star text-[#1f7171] rounded-xl"></i>4.7 Rating</p>
+                                <div class="w-[2px] rounded-full h-4 bg-neutral-400 mx-auto"></div>
+                                <p class="text-base text-gray-900"><i
+                                        class="fa-regular fa-calendar-days text-[#1f7171] mr-4 rounded-xl"></i>2 July
+                                    - 7 July</p>
+                                </p>
+                            </div>
+                            <div id="area-harga" class="mt-5 flex justify-between items-center">
+                                <p class="text-2xl text-gray-900 font-medium">$ 1,150</p>
+                                <button type="submit" onclick="window.location.href='destinatoin-bali-page.html';"
+                                    class="py-3 px-8 rounded-full bg-[#2d9b9a] transition duration-300 hover:scale-95 text-white font-medium">
+                                    See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white overflow-hidden">
+                        <img src="assets/image-7.jpg" class="w-full rounded-2xl h-96 object-cover">
+                        <div class="p-2">
+                            <p class="text-xl font-medium my-3">Bajo Bay Odyssey Untamed Beauty</p>
+                            <p class="font-normal text-gray-900"><i
+                                    class="mr-3 mb-5 text-[#1f7171] fa-solid fa-location-dot"></i>Labuan Bajo, Indonesia
+                            </p>
+                            <div id="area-rating" class="flex justify-between items-center">
+                                <p class="text-base text-gray-900"><i
+                                        class="mr-4 fa-regular fa-star text-[#1f7171] rounded-xl"></i>5.0 Rating</p>
+                                <div class="w-[2px] rounded-full h-4 bg-neutral-400 mx-auto"></div>
+                                <p class="text-base text-gray-900"><i
+                                        class="fa-regular fa-calendar-days text-[#1f7171] mr-4 rounded-xl"></i>1 June -
+                                    9 June</p>
+                                </p>
+                            </div>
+                            <div id="area-harga" class="mt-5 flex justify-between items-center">
+                                <p class="text-2xl text-gray-900 font-medium">$ 1,820</p>
+                                <button id="see-detail-page" type="submit" onclick="window.location.href='destinatoin-bajo-page.html';"
+                                    class="py-3 px-8 rounded-full bg-[#2d9b9a] transition duration-300 hover:scale-95 text-white font-medium">
+                                    See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white overflow-hidden">
+                        <img src="assets/image-8.jpg" class="w-full rounded-2xl h-96 object-cover">
+                        <div class="p-2">
+                            <p class="text-xl font-medium my-3">Bromo Volcano Wonders Revealed</p>
+                            <p class="font-normal text-gray-900 mx-auto"><i
+                                    class="mr-3 mb-5 text-[#1f7171] fa-solid fa-location-dot"></i>Mount Bromo, Indonesia
+                            </p>
+                            <div id="area-rating" class="flex justify-between items-center">
+                                <p class="text-base text-gray-900"><i
+                                        class="mr-4 fa-regular fa-star text-[#1f7171] rounded-xl"></i>4.8 Rating</p>
+                                <div class="w-[2px] rounded-full h-4 bg-neutral-400 mx-auto"></div>
+                                <p class="text-base text-gray-900"><i
+                                        class="fa-regular fa-calendar-days text-[#1f7171] mr-4 rounded-xl"></i>1 Aug
+                                    - 6 Aug</p>
+                                </p>
+                            </div>
+                            <div id="area-harga" class="mt-5 flex justify-between items-center">
+                                <p class="text-2xl text-gray-900 font-medium">$ 1,330</p>
+                                <button type="submit" onclick="window.location.href='destinatoin-bromo-page.html';"
+                                    class="py-3 px-8 rounded-full bg-[#2d9b9a] transition duration-300 hover:scale-95 text-white font-medium">
+                                    See Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex md:mt-20 mt-14 flex-col justify-center items-center w-[85%]">
+            <div class="h-[30rem] w-full relative shadow-xl rounded-3xl">
+                <div
+                    class="absolute inset-0 z-20 flex md:items-center md:justify-normal justify-center items-end rounded-3xl">
+                    <div id="text-area"
+                        class="md:p-10 p-4 md:mb-0 mb-14 bg-black text-white md:max-w-[50%] max-w-[90%] md:ml-20 ml-0 rounded-2xl">
+                        <p class="md:text-4xl text-2xl font-medium">Join Us & Enjoy 20% Discount</p>
+                        <p class="md:mt-6 mt-4 md:block hidden">Subscribe today and uncover destinations that will
+                            reignite your passion for
+                            travel. Plus, enjoy 20% off at our online shop. Every week, receive expert guidance, insider
+                            tips, and exclusive offers.</p>
+                        <p class="mt-4 md:hidden block">Subscribe now to our newsletter and enjoy a 20% discount plus
+                            weekly updates on the best travel spots.</p>
+                        <div class="md:mt-8 mt-5 flex md:flex-row flex-col md:gap-x-4 gap-y-3">
+                            <label for="email-address" class="sr-only">Email address</label>
+                            <input id="email-address" name="email" type="email" autocomplete="email" required
+                                class="flex-grow md:rounded-full rounded-3xl text-base font-light border-0 bg-white px-4 md:py-4 py-3 text-[#1f7171] ring-1 transition duration-300 ring-inset ring-[#2d9b9a] focus:ring-2 focus:ring-inset focus:ring-[#1f7171] sm:leading-6"
+                                placeholder="Enter your email">
+                            <button type="submit"
+                                class="flex-none md:rounded-full rounded-3xl bg-[#2d9b9a] md:px-5 px-3 md:py-4 py-3 text-sm font-medium text-white hover:bg-[#1f7171] transition duration-300">Sign
+                                up</button>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="assets/image-9.jpg"
+                    class="object-cover relative z-10 w-full h-full rounded-3xl md:object-[center_70%] object-bottom transform -scale-x-100">
+            </div>
+        </div>
+    </section>
+
+    <section class="flex items-center justify-start mt-20">
+        <div class="flex h-full w-full overflow-x-auto">
+            <div class="flex flex-nowrap w-72 h-80">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-10.jpg">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-11.jpg">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-12.jpg">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-13.jpg">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-14.jpg">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-15.jpg">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-16.jpg">
+                <img class="object-cover h-full flex-shrink-0" src="assets/image-17.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section id="article-page" class="flex justify-center items-center mt-20" style="font-family: 'Lexend';">
+        <div class="flex flex-col md:items-start md:justify-start justify-center items-center w-[85%]">
+            <p class="text-lg text-[#2d9b9a]">ARTICLE</p>
+            <p class="font-semibold text-3xl text-gray-900 mt-8 md:text-left text-center">Inspiration, Guides, Stories
+            </p>
+            <div class="container mx-auto mt-14">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-sm hover:scale-95 transition duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-lg" src="assets/image-18.jpg">
+                        <div class="p-4">
+                            <p class="font-medium text-lg">Fashion Outfit</p>
+                            <p class="text-[#1f7171] mt-2">26 Aug, 2024</p>
+                            <p class="text-gray-500 mt-2 mb-5">Ikat Weaving from East Nusa Tenggara is colorful with
+                                unique regional patterns.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-sm hover:scale-95 transition duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-lg" src="assets/image-19.jpg">
+                        <div class="p-4">
+                            <p class="font-medium text-lg">Typical Food</p>
+                            <p class="text-[#1f7171] mt-2">21 Aug, 2024</p>
+                            <p class="text-gray-500 mt-2">Malang's Bakso is a must-try, famous for its delicious
+                                meatballs and savory broth.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-sm hover:scale-95 transition duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-lg" src="assets/image-20.jpg">
+                        <div class="p-4">
+                            <p class="font-medium text-lg">Top Scenic Spots</p>
+                            <p class="text-[#1f7171] mt-2">9 June, 2024</p>
+                            <p class="text-gray-500 mt-2">Recommendations for places to enjoy the sunset in Bali for the
+                                twilight.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-lg shadow-md hover:shadow-sm hover:scale-95 transition duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-lg" src="assets/image-21.jpg">
+                        <div class="p-4">
+                            <p class="font-medium text-lg">Travel Health Tips</p>
+                            <p class="text-[#1f7171] mt-2">2 June, 2024</p>
+                            <p class="text-gray-500 mt-2">Pack necessary medications and a copy of your prescriptions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="why-us-page" class="mt-20 text-lg text-[#2d9b9a]">WHY US?</p>
+            <p class="font-semibold text-3xl text-gray-900 mt-8 md:text-left text-center">Reasons Why You Should Choose
+                Us</p>
+            <div class="container mx-auto mt-14">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-14">
+                    <!-- Section 1 -->
+                    <div class="flex flex-col justify-center md:items-start items-center">
+                        <i class="text-3xl text-white p-5 bg-[#1f7171] rounded-xl fa-solid fa-handshake-simple"></i>
+                        <p class="text-[#2d9b9a] mt-5 font-medium text-lg">User-Friendly Interface</p>
+                        <p class="text-gray-500 md:text-left text-center mt-4">Enjoy an intuitive website design that
+                            makes finding
+                            information and planning your trip effortless.</p>
+                    </div>
+                    <!-- Section 2 -->
+                    <div class="flex flex-col justify-center md:items-start items-center">
+                        <i class="text-3xl text-white py-5 px-6 bg-[#1f7171] rounded-xl fa-solid fa-calendar-days"></i>
+                        <p class="text-[#2d9b9a] mt-5 font-medium text-lg">Up-to-Date Information</p>
+                        <p class="text-gray-500 md:text-left text-center mt-4">Stay informed with the latest updates on
+                            travel
+                            conditions, local events, and new attractions.</p>
+                    </div>
+                    <!-- Section 3 -->
+                    <div class="flex flex-col justify-center md:items-start items-center">
+                        <i class="text-3xl text-white py-5 px-6 bg-[#1f7171] rounded-xl fa-solid fa-tags"></i>
+                        <p class="text-[#2d9b9a] mt-5 font-medium text-lg">Exclusive Deals and Offers</p>
+                        <p class="text-gray-500 md:text-left text-center mt-4">Exclusive deals and discounts available
+                            only through
+                            our site for tours and hotels.</p>
+                    </div>
+                    <!-- Section 4 -->
+                    <div class="flex flex-col justify-center md:items-start items-center">
+                        <i class="text-3xl text-white p-5 bg-[#1f7171] rounded-xl fa-solid fa-bridge-circle-check"></i>
+                        <p class="text-[#2d9b9a] mt-5 font-medium text-lg">Reliable and Accurate</p>
+                        <p class="text-gray-500 md:text-left text-center mt-4">Accurate, vetted information ensures your
+                            travel plans
+                            are reliable and well-informed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flex justify-center items-center mt-20">
+        <div class="relative w-full h-40 text-center flex justify-center items-center" style="font-family: 'Lexend';">
+            <img class="w-full h-full object-cover object-[center_90%]" src="assets/image-22.jpg">
+            <a href="#plan-page">
+                <p class="absolute z-20 text-white py-4 text-sm rounded-sm border-2 border-white px-14 hover:text-base bg-[#1f7171] cursor-pointer duration-300 transition-all"
+                    style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    TRAVEL TOGETHER
+                </p>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="flex justify-center items-center mt-20" style="font-family: 'Lexend';">
+        <div class="flex flex-col md:items-start md:justify-start justify-center items-center w-[85%]">
+            <p class="text-lg text-[#2d9b9a]">REVIEWS</p>
+            <p class="font-semibold text-3xl text-gray-900 mt-8 md:text-left text-center">What Our Clients Say About Us
+            </p>
+            <div id="default-carousel"
+                class="mt-14 relative w-full rounded-xl border-b-2 border-t-2 border-r border-l border-gray-900"
+                data-carousel="slide">
+                <div class="relative h-[25rem] md:h-[30rem] overflow-hidden">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-[2000ms] mb-5 ease-in-out" data-carousel-item>
+                        <div class="container w-full h-full flex items-center justify-center">
+                            <div
+                                class="flex flex-col space-y-4 md:flex-col md:space-y-4 lg:flex-row lg:space-x-12 lg:space-y-0">
+                                <div class="relative flex-none md:w-44 md:h-52 md:block hidden">
+                                    <div id="border"
+                                        class="absolute inset-0 -m-4 top-10 right-10 border-4 border-[#2d9b9a] rounded-sm z-0">
+                                    </div>
+                                    <img class="object-cover md:block hidden w-full h-full rounded-sm absolute z-10 object-top"
+                                        src="assets/image-23.jpg">
+                                </div>
+                                <div class="flex-1 text-center md:text-left">
+                                    <p class="font-medium md:text-lg text-gray-900">Lamelo Ball</p>
+                                    <p class="text-sm text-[#1f7171]">American, 23 Years Old</p>
+                                    <div class="space-x-1 mt-2 text-[#2d9b9a]">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="w-[16rem] md:w-[25rem] text-sm text-gray-900 md:mt-5 mt-3">"My adventure
+                                        to Raja
+                                        Ampat was unforgettable thanks to the website. I used the detailed snorkeling
+                                        and diving guides to explore the underwater beauty. The site’s interactive map
+                                        helped me find the best dive spots and accommodations. The travel tips on
+                                        avoiding crowds and the best times to visit were invaluable."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-[2000ms] mb-5 ease-in-out" data-carousel-item>
+                        <div class="container w-full h-full flex items-center justify-center">
+                            <div
+                                class="flex flex-col space-y-4 md:flex-col md:space-y-4 lg:flex-row lg:space-x-12 lg:space-y-0">
+                                <div class="relative flex-none md:w-44 md:h-52 md:block hidden">
+                                    <div id="border"
+                                        class="absolute inset-0 -m-4 top-10 right-10 border-4 border-[#2d9b9a] rounded-sm z-0">
+                                    </div>
+                                    <img class="object-cover md:block hidden w-full h-full rounded-sm absolute z-10 object-top"
+                                        src="assets/image-24.jpg">
+                                </div>
+                                <div class="flex-1 text-center md:text-left">
+                                    <p class="font-medium md:text-lg text-gray-900">Ja Morant</p>
+                                    <p class="text-sm text-[#1f7171]">American, 25 Years Old</p>
+                                    <div class="space-x-1 mt-2 text-[#2d9b9a]">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="w-[16rem] md:w-[25rem] text-sm text-gray-900 md:mt-5 mt-3">"My Bali
+                                        vacation was fantastic thanks to "Indonesia Paradise"! The website made planning
+                                        easy with its user-friendly search features and comprehensive information on
+                                        accommodations and activities and all the
+                                        activities were top-notch. Overall, I
+                                        had a wonderful experience and highly recommend "Indonesia Paradise" for your
+                                        Bali getaway!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-[2000ms] mb-5 ease-in-out" data-carousel-item>
+                        <div class="container w-full h-full flex items-center justify-center">
+                            <div
+                                class="flex flex-col space-y-4 md:flex-col md:space-y-4 lg:flex-row lg:space-x-12 lg:space-y-0">
+                                <div class="relative flex-none md:w-44 md:h-52 md:block hidden">
+                                    <div id="border"
+                                        class="absolute inset-0 -m-4 top-10 right-10 border-4 border-[#2d9b9a] rounded-sm z-0">
+                                    </div>
+                                    <img class="object-cover md:block hidden w-full h-full rounded-sm absolute z-10 object-top"
+                                        src="assets/image-25.jpg">
+                                </div>
+                                <div class="flex-1 text-center md:text-left">
+                                    <p class="font-medium md:text-lg text-gray-900">Jalen Green</p>
+                                    <p class="text-sm text-[#1f7171]">American, 22 Years Old</p>
+                                    <div class="space-x-1 mt-2 text-[#2d9b9a]">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="w-[16rem] md:w-[25rem] text-sm text-gray-900 md:mt-5 mt-3">"My Bromo tour
+                                        was fantastic, all thanks to "Indonesia Paradise"! The website provided easy
+                                        access to great tour options and accommodations. The recommended hotel was
+                                        perfect, The customer service was
+                                        friendly and efficient. I highly recommend "Indonesia Paradise" for a smooth and
+                                        enjoyable Bromo experience!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="hidden duration-[2000ms] mb-5 ease-in-out" data-carousel-item>
+                        <div class="container w-full h-full flex items-center justify-center">
+                            <div
+                                class="flex flex-col space-y-4 md:flex-col md:space-y-4 lg:flex-row lg:space-x-12 lg:space-y-0">
+                                <div class="relative flex-none md:w-44 md:h-52 md:block hidden">
+                                    <div id="border"
+                                        class="absolute inset-0 -m-4 top-10 right-10 border-4 border-[#2d9b9a] rounded-sm z-0">
+                                    </div>
+                                    <img class="object-cover md:block hidden w-full h-full rounded-sm absolute z-10 object-top"
+                                        src="assets/image-26.jpg">
+                                </div>
+                                <div class="flex-1 text-center md:text-left">
+                                    <p class="font-medium md:text-lg text-gray-900">Tyrese Haliburton</p>
+                                    <p class="text-sm text-[#1f7171]">American, 24 Years Old</p>
+                                    <div class="space-x-1 mt-2 text-[#2d9b9a]">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="w-[16rem] md:w-[25rem] text-sm text-gray-900 md:mt-5 mt-3">"Indonesia
+                                        Paradise" made planning my Raja Ampat getaway effortless. The website’s
+                                        user-friendly interface helped me book fantastic tours and a great hotel. The
+                                        stay was comfortable, Their
+                                        responsive customer service added to the smooth experience. I’ll definitely use
+                                        "Indonesia Paradise" for my next adventure!
+
+                                        "</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="hidden duration-[2000ms] mb-5 ease-in-out" data-carousel-item>
+                        <div class="container w-full h-full flex items-center justify-center">
+                            <div
+                                class="flex flex-col space-y-4 md:flex-col md:space-y-4 lg:flex-row lg:space-x-12 lg:space-y-0">
+                                <div class="relative flex-none md:w-44 md:h-52 md:block hidden">
+                                    <div id="border"
+                                        class="absolute inset-0 -m-4 top-10 right-10 border-4 border-[#2d9b9a] rounded-sm z-0">
+                                    </div>
+                                    <img class="object-cover md:block hidden w-full h-full rounded-sm absolute z-10 object-top"
+                                        src="assets/image-27.jpg">
+                                </div>
+                                <div class="flex-1 text-center md:text-left">
+                                    <p class="font-medium md:text-lg text-gray-900">Stephen Curry</p>
+                                    <p class="text-sm text-[#1f7171]">American, 36 Years Old</p>
+                                    <div class="space-x-1 mt-2 text-[#2d9b9a]">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="w-[16rem] md:w-[25rem] text-sm text-gray-900 md:mt-5 mt-3">"My Labuan Bajo
+                                        trip was perfectly planned with "Indonesia Paradise"! The website made it easy
+                                        to find and book top-notch tours and accommodations. The stay was wonderful, and
+                                        the Komodo Island adventures were spectacular. For a seamless Labuan Bajo
+                                        experience, "Indonesia
+                                        Paradise" is the way to go!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div
+                    class="absolute z-30 flex -translate-x-1/2 -bottom-7 bg-white py-5 px-8 border-2 rounded-full border-gray-900 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                        data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                        data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                        data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                        data-carousel-slide-to="3"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                        data-carousel-slide-to="4"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="plan-page" class="flex justify-center items-center mt-20" style="font-family: 'Lexend';">
+        <div class="w-[85%]">
+            <div class="flex flex-col md:flex-row gap-x-2 items-stretch border-2 border-gray-900 rounded-2xl">
+                <div class="w-full md:w-1/2 md:p-10 p-7">
+                    <p class="text-gray-900 font-semibold text-4xl md:w-80 w-auto">Plan Your Perfect Vacation Now</p>
+
+                    <form class="max-w-full mt-10">
+                        <select id="countries"
+                            class="bg-gray-50 border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-[#1f7171] focus:border-[#1f7171] block w-full p-3">
+                            <option>Select Your Tour</option>
+                            <option>Bali</option>
+                            <option>Labuan Bajo</option>
+                            <option>Bromo Mount</option>
+                            <option>Raja Ampat</option>
+                        </select>
+                    </form>
+                    <div class="max-w-full mt-7">
+                        <input placeholder="Your Name" type="text" id="base-input"
+                            class="bg-transparent border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-[#1f7171] focus:border-[#1f7171] block w-full p-3">
+                    </div>
+                    <div class="max-w-full mt-7">
+                        <input placeholder="Your Number" type="number" id="base-input"
+                            class="bg-transparent border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-[#1f7171] focus:border-[#1f7171] block w-full p-3">
+                    </div>
+                    <label class="mt-5 inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value="" class="sr-only peer">
+                        <div
+                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#2d9b9a] rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-[#1f7171] after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#1f7171]">
+                        </div>
+                        <span class="ms-3 text-sm text-gray-900">Agree with privacy policy</span>
+                    </label>
+                    <a href="#">
+                        <p
+                            class="max-w-[15rem] text-white text-sm mt-7 rounded-xl py-4 font-medium flex justify-center items-center text-center bg-[#2d9b9a] transition-all duration-300 hover:scale-95">
+                            TRAVEL TOUGETHER</p>
+                    </a>
+                </div>
+
+                <div class="w-full md:w-1/2 p-10 md:block hidden">
+                    <div class="md:w-[34rem] md:h-[28rem] w-[20rem h-[16rem]]">
+                        <img class="w-full h-full object-cover object-[center_65%] rounded-3xl"
+                            src="assets/image-29.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex justify-center items-center mt-20" style="font-family: 'Lexend';">
+        <div class="w-[85%] flex justify-center items-center">
+            <section class="flex flex-col md:flex-row w-full">
+                <!-- Bagian Kiri -->
+                <div id="contact-page" class="left-section md:w-1/2 w-full md:pr-4">
+                    <div class="flex flex-col h-full">
+                        <p class="md:text-6xl text-4xl font-semibold text-gray-900">OUR CONTACTS</p>
+                        <div class="w-full mt-8 flex flex-col justify-start items-start">
+                            <p class="text-gray-900">Jl. Raya Jonggol-Dayeuh, Sukanegara, District. Jonggol, Bogor Regency, West Java 16830</p>
+                            <p class="text-gray-900 mt-5">Number : +62 1234567890</p>
+                            <p class="text-gray-900 mt-1">Email : indonesiaparadise@gmail.com</p>
+                            <div class="flex justify-start items-center mt-8 space-x-3">
+                                <a href="https://www.instagram.com/naufalazrieel/">
+                                    <i class="text-[#2d9b9a] hover:scale-105 duration-300 text-4xl rounded-full fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/naufal-azriel-al-azizy-3ab625283/">
+                                    <i class="text-[#2d9b9a] hover:scale-105 duration-300 text-4xl rounded-full fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="text-[#2d9b9a] hover:scale-105 duration-300 text-4xl rounded-full fa-brands fa-square-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Bagian Kanan -->
+                <div class="right-section md:w-1/2 w-full md:pl-4 mt-8 md:mt-0">
+                    <div class="flex flex-col h-full">
+                        <div class="w-full">
+                            <div class="overflow-hidden">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.971507158905!2d107.03556067534454!3d-6.525282293467309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bc6e5be3d9bd%3A0x6b9881dabd801476!2sSMK%20IDN%20Boarding%20School!5e0!3m2!1sid!2sid!4v1725432445586!5m2!1sid!2sid"
+                                    allowfullscreen="" class="rounded-2xl w-full h-[18rem] border-2 border-gray-900" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </section>
+
+    <footer class="mt-20 bg-[#1f7171] rounded-sm">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 md:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <img class="w-40" src="logo-white.png" alt="Logo">
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Top Destinations</h2>
+                        <ul class="text-stone-300 font-medium">
+                            <li class="mb-4">
+                                <a href="destinatoin-bali-page.html" class="hover:underline">Bali</a>
+                            </li>
+                            <li>
+                                <a href="destinatoin-bajo-page.html" class="hover:underline">Labuan Bajo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Information</h2>
+                        <ul class="text-stone-300 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline ">Help & FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Follow Us</h2>
+                        <ul class="text-stone-300 font-medium">
+                            <li class="mb-4">
+                                <a href="https://www.instagram.com/naufalazrieel/" class="hover:underline">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/naufal-azriel-al-azizy-3ab625283/"
+                                    class="hover:underline">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-white mx-auto md:my-8" />
+            <div class="flex justify-center items-center">
+                <span class="text-sm text-white text-center">© 2024 <a href="#" class="hover:underline">INDONESIA
+                        PARADISE™</a>.
+                    All Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            const targetSection = document.getElementById('target');
+            const targetPosition = targetSection.getBoundingClientRect().top;
+
+            if (targetPosition <= 0) {
+                navbar.classList.remove('navbar-static', 'navbar-hidden');
+                navbar.classList.add('navbar-fixed');
+            } else if (window.scrollY === 0) {
+                navbar.classList.remove('navbar-fixed', 'navbar-hidden');
+                navbar.classList.add('navbar-static');
+            } else {
+                navbar.classList.remove('navbar-fixed');
+                navbar.classList.add('navbar-hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
